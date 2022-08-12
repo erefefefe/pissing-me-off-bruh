@@ -1,11 +1,7 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Basketball Gui V1 | Made by vaultzx", "Synapse")
+
 
 --Phenom--
-local Phenom = Window:NewTab("Phenom")
-local Phenom = Phenom:NewSection("Player")
-
-Phenom:NewSlider("Walkspeed", "Change your speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValues)
+local Phenom = Window:NewTab("Phenom" your speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValues)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
@@ -495,39 +491,8 @@ function GetIdealMovementVector (netPos, targetPos, selfPos)
 							end
 						end
 
-						break
-					end
-				end
 
-				break
-			end
-		end
 
-		warn("Bad return")
-		warn(debug.traceback())
-		return netPos  -- Redundant return (but we will leave it for safety)
-	end
-
-	local bestPosition = GetIdealPointAlongLine ()
-	local movementVector = bestPosition - selfPos
-
-	if (movementVector).Magnitude < (1/8) then
-		return Vector3.new()
-	end
-
-	return movementVector	
-end
-
---function CalculateNearestAngle (s, e, third)
---	local dir = (e - s)
---	if (dir.Magnitude < 1/1028) then
---		error ("'s' and 'e' cannot be identical")
---	end
---	dir = Flatten (dir)
-
---	s = Flatten (s)
---	e = Flatten (e)
---	third = Flatten (third)
 
 --	local t = (third - s):Dot(dir) / dir:Dot(dir)
 
